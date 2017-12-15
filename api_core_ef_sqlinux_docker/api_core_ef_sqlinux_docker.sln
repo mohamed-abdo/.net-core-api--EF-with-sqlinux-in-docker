@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api_core_ef_sqlinux_docker", "api_core_ef_sqlinux_docker\api_core_ef_sqlinux_docker.csproj", "{BDD8A699-CAF0-4178-9BCA-E1102AB41D1B}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{BAF64AD5-3CD6-4D31-AAA4-BC95814C7889}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDD8A699-CAF0-4178-9BCA-E1102AB41D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD8A699-CAF0-4178-9BCA-E1102AB41D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD8A699-CAF0-4178-9BCA-E1102AB41D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD8A699-CAF0-4178-9BCA-E1102AB41D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF64AD5-3CD6-4D31-AAA4-BC95814C7889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF64AD5-3CD6-4D31-AAA4-BC95814C7889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF64AD5-3CD6-4D31-AAA4-BC95814C7889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF64AD5-3CD6-4D31-AAA4-BC95814C7889}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13A56756-EFED-44EC-989F-7F8CCD7A60F7}
+	EndGlobalSection
+EndGlobal

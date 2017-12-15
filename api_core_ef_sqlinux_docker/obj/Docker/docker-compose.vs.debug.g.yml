@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  api_core_ef_sqlinux_docker:
+    image: api_core_ef_sqlinux_docker:dev
+    build:
+      args:
+        source: obj/Docker/empty/
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_api_core_ef_sqlinux_docker$
+    volumes:
+      - C:\Users\abdo\Source\Repos\api_core_ef_sqlinux_docker\api_core_ef_sqlinux_docker:/app
+      - C:\Users\abdo\vsdbg:/remote_debugger:ro
+      #- $nuget_user_folder_api_core_ef_sqlinux_docker$:/root/.nuget/packages:ro
+#$nuget_fallback_packages_volume_mapping_api_core_ef_sqlinux_docker$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_api_core_ef_sqlinux_docker$ bin/Debug/netcoreapp2.0/api_core_ef_sqlinux_docker.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""

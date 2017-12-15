@@ -1,0 +1,18 @@
+version: '3'
+services:
+  api_core_ef_sqlinux_docker:
+    container_name: api-web-container
+    image: api_core_sample
+    build:
+      context: ./api_core_ef_sqlinux_docker
+      dockerfile: Dockerfile
+    depends_on:
+      - sql.data
+  sql.data:
+    image: microsoft/mssql-server-linux:latest
+    environment:
+      - MSSQL_SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Express
+    ports:
+      - "5435:1433"

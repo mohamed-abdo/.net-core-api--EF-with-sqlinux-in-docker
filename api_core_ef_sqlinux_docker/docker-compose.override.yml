@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  api_core_ef_sqlinux_docker:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"

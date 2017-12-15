@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  api_core_ef_sqlinux_docker:
+    build:
+      args:
+        source: obj/Docker/publish/
+    volumes:
+      - C:\Users\abdo\vsdbg:/remote_debugger:ro
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_api_core_ef_sqlinux_docker$ api_core_ef_sqlinux_docker.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
